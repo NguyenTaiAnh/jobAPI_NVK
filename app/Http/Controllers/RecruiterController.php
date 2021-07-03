@@ -79,7 +79,7 @@ class RecruiterController extends Controller
                 $path =public_path() . '/assets/Avatar';
                 // Bắt đầu chuyển file vào thư mục
                 $image->move($path,$name);
-                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;
+                $data->Avatar ='http://127.0.0.1:8000/assets/Avatar/'. $name;  // đổi đường dẫn http://127.0.0.1:8000
             }
             if($request->hasFile('Cover')){
                 $image = $request->file('Cover');
