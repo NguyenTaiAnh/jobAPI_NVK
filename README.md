@@ -1,10 +1,14 @@
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=job
-DB_USERNAME=root
-DB_PASSWORD=
-
+<h1>Edit db</h1>
+<p>DB_CONNECTION=mysql</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=3306</p>
+<p>DB_DATABASE=job</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=</p>
+<h1>Change link</h1>
+<pre>
+     $data->CV = 'http://127.0.0.1:8000/assets/fileCV/'.$filename;
+</pre>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
