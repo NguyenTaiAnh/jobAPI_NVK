@@ -24,11 +24,27 @@ Route::get('/',function (){
 Route::group(['prefix' => 'work'], function (){
     Route::get('',[\App\Http\Controllers\WorkController::class, 'index'] );
     Route::post('',[\App\Http\Controllers\WorkController::class, 'store'] );
-});Route::group(['prefix' => 'recruiter'], function (){
+});
+Route::group(['prefix' => 'recruiter'], function (){
     Route::get('',[\App\Http\Controllers\RecruiterController::class, 'index'] );
     Route::post('',[\App\Http\Controllers\RecruiterController::class, 'store'] );
     Route::get('{ID_Recruiter}',[\App\Http\Controllers\RecruiterController::class, 'show'] );
     Route::post('{ID_Recruiter}',[\App\Http\Controllers\RecruiterController::class, 'update'] );
+});
+
+Route::group(['prefix' => 'applicant'], function (){
+    Route::get('',[\App\Http\Controllers\ApplicantsController::class, 'index'] );
+    Route::post('',[\App\Http\Controllers\ApplicantsController::class, 'store'] );
+    Route::get('{ID_Applicants}',[\App\Http\Controllers\ApplicantsController::class, 'show'] );
+    Route::post('{ID_Applicants}',[\App\Http\Controllers\ApplicantsController::class, 'update'] );
+});
+
+Route::group(['prefix' => 'recruitment'], function (){
+    Route::get('',[\App\Http\Controllers\ReruitmentController::class, 'index'] );
+    Route::post('',[\App\Http\Controllers\ReruitmentController::class, 'store'] );
+    Route::get('{ID_Recruitment}',[\App\Http\Controllers\ReruitmentController::class, 'show'] );
+    Route::post('{ID_Recruitment}',[\App\Http\Controllers\ReruitmentController::class, 'update'] );
+
 });
 Route::group(['prefix' => 'style'], function (){
     Route::get('',function (){
@@ -40,4 +56,5 @@ Route::group(['prefix' => 'style'], function (){
     } );
 });
 
+Route::get('search',[\App\Http\Controllers\ReruitmentController::class, 'search'] );
 //Route::post('','WorkController@store' );
